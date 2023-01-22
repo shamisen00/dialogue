@@ -1,21 +1,19 @@
-FROM ubuntu:20.04
+ARG python_image_v="python:3.10-buster"
+
+FROM ${python_image_v}
+
+ENV DEBIAN_FRONTEND=noninteractive
 
 SHELL ["/bin/bash", "-c"]
 
-# to avoid selecting timezone on installing packages.
-ENV DEBIAN_FRONTEND=noninteractive
-
-RUN apt update && apt install -y python3 \
-    python3-distutils \
+RUN apt update && apt install -y \
     git \
     curl \
     && rm -rf /var/lib/apt/lists
 
-RUN echo "alias python='python3' " >> ~/.bashrc
-
-COPY .devcontainer/scripts/docker-init.sh /usr/local/share
+ENV PATH /etc/poetry/bin:$PATH
 
 RUN source ~/.bashrc \
     && curl -sSL https://install.python-poetry.org | POETRY_HOME=/etc/poetry python3 -
 
-ENV PATH /etc/poetry/bin:$PATH
+ENV POETRY_VIRTUALENVS_CREATE=false
