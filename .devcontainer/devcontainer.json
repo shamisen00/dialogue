@@ -28,7 +28,27 @@
 				"ZainChen.json",
 				"humao.rest-client",
 				"GitHub.vscode-pull-request-github"
-			]
+			],
+
+			"settings": {
+				"python.linting.enabled": true,
+				"python.linting.lintOnSave": true,
+				// Pylance
+				"python.languageServer": "Pylance",
+				// Linter(flake8)
+				"python.linting.flake8Path": "/usr/local/bin/flake8",
+				"python.linting.pylintEnabled": false,
+				"python.linting.flake8Enabled": true,
+				// Formatter(black)
+				"python.formatting.blackPath": "/usr/local/bin/black",
+				"python.formatting.provider": "black",
+				"python.formatting.blackArgs": [
+					"--line-length=79"
+				],
+				"[python]": {
+					"editor.formatOnSave": true
+				}
+			}
 		}
 	}
 
