@@ -1,5 +1,5 @@
 {
-	"name": "python-dev",
+	"name": "dialogue-systems",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "dev",
 	"workspaceFolder": "/workspace",
