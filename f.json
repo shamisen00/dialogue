@@ -1,0 +1,50 @@
+{
+	"name": "dialogue-systems",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "dev",
+	"workspaceFolder": "/workspace",
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"eamodio.gitlens",
+				"mhutchie.git-graph",
+				"GitHub.copilot",
+				"GitHub.copilot-labs",
+				"gencay.vscode-chatgpt",
+				"njpwerner.autodocstring",
+				"MS-vsliveshare.vsliveshare-pack",
+				"yzhang.markdown-all-in-one",
+				"ms-vscode-remote.remote-containers",
+				"CodeStream.codestream",
+				"GitHub.github-vscode-theme",
+				"Gruntfuggly.todo-tree",
+				"hediet.vscode-drawio",
+				"ZainChen.json",
+				"humao.rest-client",
+				"GitHub.vscode-pull-request-github"
+			],
+
+			"settings": {
+				"python.linting.enabled": true,
+				"python.linting.lintOnSave": true,
+				"python.languageServer": "Pylance",
+				"python.linting.flake8Path": "/usr/local/bin/flake8",
+				"python.linting.pylintEnabled": false,
+				"python.linting.flake8Enabled": true,
+				"python.formatting.blackPath": "/usr/local/bin/black",
+				"python.formatting.provider": "black",
+				"python.formatting.blackArgs": [
+					"--line-length=79"
+				],
+				"[python]": {
+					"editor.formatOnSave": true
+				}
+			}
+		}
+	}
+
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	// "remoteUser": "vscode",
+}
