@@ -9,6 +9,7 @@ SHELL ["/bin/bash", "-c"]
 RUN apt update && apt install -y \
     git \
     curl \
+    libportaudio2 \
     && rm -rf /var/lib/apt/lists
 
 ENV PATH /etc/poetry/bin:$PATH
