@@ -5,10 +5,13 @@ description = ""
 authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "3.10.0"
 fastapi = "^0.89.1"
 uvicorn = "^0.20.0"
-soundcard = "^0.4.2"
+sounddevice = "^0.4.5"
+numpy = "^1.24.2"
+torch = {url = "https://download.pytorch.org/whl/cu116/torch-1.12.1%2Bcu116-cp310-cp310-win_amd64.whl"}
+openai-whisper = {git = "https://github.com/openai/whisper.git"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
